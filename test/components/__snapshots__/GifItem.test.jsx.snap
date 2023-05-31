@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en el componente <GifItem /> Debe de hacer match con el snapshot  1`] = `
+<div>
+  <div
+    class="card"
+  >
+    <p>
+      Back To The Future GIF
+    </p>
+    <img
+      alt="Back To The Future GIF"
+      src="https://media2.giphy.com/media/xsF1FSDbjguis/giphy.gif?cid=505daff6au6re92h99hyrpdtttcdqausyji2at27n4ot9xmk&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+    />
+  </div>
+</div>
+`;
