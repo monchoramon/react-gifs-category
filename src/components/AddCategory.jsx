@@ -11,7 +11,7 @@ export const AddCategory = ({ onNewCategory }) => {
 
     // --- Enter y agregar a la lista
     const onSubmit = (evt) => {
-
+        
         evt.preventDefault();
 
         let trimInputValue = inputValue.trim();
@@ -26,7 +26,7 @@ export const AddCategory = ({ onNewCategory }) => {
     }
 
     return (
-        <form onSubmit={onSubmit}>
+        <form onSubmit={onSubmit} aria-label='form'>
             <input
                 type="text"
                 placeholder='Buscar gifs'
