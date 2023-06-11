@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { GifItem } from '../components/GifItem';
 import { useFetchGifs } from "../hooks/useFetchGifs";
 
@@ -9,7 +10,7 @@ export const GifGrid = ({ category }) => {
         <>
             <hr />
             <h3>Categoría:</h3>
-            <h4 className='categoryName'>{">"} {category}</h4>
+            <h4 className='categoryName'>{">" + category}</h4>
             <br />
             {
                 isLoading && <b>Cargando...</b>
@@ -24,14 +25,20 @@ export const GifGrid = ({ category }) => {
                             {...image} />
                     ))
                 }
-                {!findImages &&
+                {
+                    !findImages &&
                     <h4 className='alert-warning'>
                         <p>
                             <b>¡No hay imágenes para mostrar!</b>
                         </p>
-                    </h4>}
+                    </h4>
+                }
             </div>
         </>
     )
 
+}
+
+GifGrid.prototypes = {
+    category: PropTypes.string.isRequired
 }

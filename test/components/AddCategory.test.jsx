@@ -29,15 +29,15 @@ describe('Prueba del componente <AddCategory />', () => {
         // screen.debug();
         expect(input.value).toBe('');
 
-        // --- Evaluando ejecución de función.
+        // --- Evaluando la ejecución de la función.
         expect(onNewCategory).toHaveBeenCalled();
         expect(onNewCategory).toHaveBeenCalledTimes(1);
         expect(onNewCategory).toHaveBeenCalledWith(inputValue);
 
 
     });
-    
-    test('No debe de llamar el onNewCategory si el input está vació', () => {
+
+    test('No se debe de llamar el onNewCategory si el input está vació', () => {
 
         const onNewCategory = jest.fn();
         render(<AddCategory onNewCategory={onNewCategory} />);
